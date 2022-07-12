@@ -6,7 +6,7 @@ const vm = new Vue({
   },
   methods: {
     fetchFilme() {
-      fetch(`http://www.omdbapi.com/?t=${this.nomeFilme}&apikey=63b6ca65`)
+      fetch(`https://www.omdbapi.com/?t=${this.nomeFilme}&apikey=63b6ca65`)
         .then((response) => response.json())
         .then((body) => (this.filme = body));
     },
