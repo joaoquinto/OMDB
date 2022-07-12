@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(0, 7%, 21%);
+}
+
+.titulo {
+  margin-top: 5vh;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  animation: fadeInDown 0.3s forwards;
+}
+
+.container_pequisa {
+  padding: 30px 0;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10vh auto;
+  align-items: center;
+  animation: fadeInDown 0.3s forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+label {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container_pequisa input {
+  padding: 10px 5px;
+  border: 3px solid tomato;
+  max-width: 50%;
+  margin-top: 20px;
+}
+
+.btn_pesquisa {
+  margin-top: 20px;
+  border: none;
+  padding: 10px 20px;
+  background-color: tomato;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn_pesquisa:hover {
+  transform: scale(1.2);
+}
+
+.container_filme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.card_img {
+  border-radius: 5px;
+  border: 2px solid tomato;
+  margin: 0 auto 20px auto;
+}
+
+.card_titulo {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  border: 2px solid tomato;
+  padding: 5px;
+}
+
+.container_info {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+  border: 2px solid tomato;
+}
+
+.container_info li {
+  padding: 10px 5px;
+  font-size: 1.1rem;
+  transition: 0.1s;
+}
+
+.container_info li:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.container_info li + li {
+  border-top: 2px solid tomato;
+}
+
+.mensagem_error {
+  margin: 0 auto;
+  width: 80vw;
+}
+
+@media (min-width: 800px) {
+  .container_filme,
+  .mensagem_error {
+    width: 40vw;
+  }
+}

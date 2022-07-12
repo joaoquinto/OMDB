@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/vue.js"></script>
+    <title>OMDB</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="titulo">Pesquise o seu filme no IMDB</h1>
+      <form action="" class="container_pequisa">
+        <label for="nome">Digite o nome original do filme</label>
+        <input type="text" v-model="nomeFilme" />
+        <button @click.prevent="fetchFilme" class="btn_pesquisa">Enviar</button>
+      </form>
+      <section class="container_filme">
+        <div class="card_filme" v-if="filme.Response === 'True'">
+          <img :src="filme.Poster" :alt="filme.title" class="card_img" />
+          <h1 v-text="filme.Title" class="card_titulo"></h1>
+          <ul class="container_info">
+            <li v-text="filme.Director"></li>
+            <li v-text="filme.Writer"></li>
+            <li v-text="filme.Genre"></li>
+            <li v-text="filme.Language"></li>
+            <li v-text="filme.Year"></li>
+          </ul>
+        </div>
+        <p v-else-if="filme.Response === 'False'" class="mensagem_error">
+          <img src="./img/undraw_page_not_found_re_e9o6.svg" alt="" />
+        </p>
+      </section>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
