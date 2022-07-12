@@ -9,6 +9,16 @@
 - [@joaoquinto](https://github.com/joaoquinto)
 
 
+## Tecnologias
+
+- Vue.js
+- HTML5
+- CSS3
+- JavaScript
+- Google Analytics
+- Git
+
+
 ## Aprendizados
 
 ### O que você aprendeu construindo esse projeto? 
